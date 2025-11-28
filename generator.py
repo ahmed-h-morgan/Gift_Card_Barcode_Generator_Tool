@@ -18,7 +18,7 @@ image_path = "gift_card_barcode.jpeg"
 
 for index, row in df.iterrows():
     
-    barcode_value = str(row[0])
+    barcode_value = str(int(row[0]))
     barcode_class = barcode.get_barcode_class("code128")
     barcode_image = barcode_class(barcode_value, writer=ImageWriter())
 
